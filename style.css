@@ -65,7 +65,7 @@ h5 {
   margin: 10px;
   max-width: 350px;
   width: 350px;
-  min-height: 350px;
+  min-height: 390px;
 }
 .es-nav__single--cola {
   background-color: #de0a1c;
@@ -113,7 +113,7 @@ h5 {
 }
 .es-nav__product {
   margin-left: -5px;
-  max-height: 180px;
+  max-height: 200px;
 }
 .es-nav__product--secondary {
   margin-left: 0;

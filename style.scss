@@ -1,0 +1,191 @@
+@charset "UTF-8";
+html{
+    scroll-behavior: smooth;
+  }
+  $regular: 'TCCC-UnityCondensed', sans-serif;
+  $red: #de0a1c;
+  $orange: #ff8300;
+  $green: #00a938;
+  $dark-green:#1e712f;
+  $burgundy: #6c1f37;
+  $navy: #00256c;
+  $white: #fff;
+  $beige: #ffe7bb;
+  $darkbrown:#341a11;
+  $black: #000;
+  
+  @mixin img {
+      max-width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  
+    @mixin text {
+      margin: 0;
+      padding: 0;
+      line-height: inherit;
+      color: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: $regular;
+      color: $black;
+    }
+  
+    #es-CocaCola .es-CocaCola {
+      font-family: $regular;
+      max-width: 1280px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1;
+      margin: 0 auto;
+      padding: 0;
+      overflow: hidden;
+      color: #000;
+      background: #fff;
+      scroll-behavior: smooth;
+    }
+    .es-kv{
+        max-width: 1280px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+    .es-nav{
+        padding: 10px 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 1280px;
+        &__main{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        &__secondary{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        &__single{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 40px;
+          position: relative;
+          margin: 10px;       
+          max-width: 350px;
+          width:350px;
+          min-height: 350px;
+          &--cola{
+            background-color: $red;
+          }
+          &--fanta{
+            background-color: $orange;
+          }
+          &--fuzeTea{
+            background-color: $green;
+          }
+          &--cappy{
+            background-color: $black;
+          }
+          &--adez{
+            background-color: $beige;
+          }
+          &--smartWater{
+            background-color: $white;
+          }
+          &--costaCoffee{
+            background-color: $burgundy;
+          }
+          &--thinner{
+            width: 300px;
+          }
+        }
+        &__logo{
+          padding: 20px;
+        }
+        &__link{
+          position: absolute;
+          top: 40%;
+          width: 50px;
+          height: 50px;
+          &--secondary{
+          top: 32%;
+          }
+          &--mobile{
+            display: none;
+          }
+          &:hover{
+            transform: scale(1.1);
+            transition: all 200ms ease-in-out;
+            opacity: .8;
+  
+          }
+        }
+        &__product{
+            margin-left: -5px;
+            max-height: 180px;
+            &--secondary{
+                margin-left: 0;
+            }
+        }
+      }
+    .es-banner{
+        display: flex;
+        flex-direction: column;
+        max-width: 1280px;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 1285px){
+        .es-nav{
+            &__main{
+                justify-content: center;
+                margin: 0 auto;
+            }
+        }
+    }
+    @media screen and (max-width: 650px){
+        .es-nav{
+          &__single{
+            min-height: 180px;
+            width: 100%;
+            padding: 0;
+            justify-content: center;
+          }
+          &__product{
+            display: none;
+          }
+          &__link{
+            display: none;
+            &--mobile{
+                display: block;
+                position: absolute;
+                top:75%;
+                width: 30px;
+                height: 30px;
+                transform: rotate(90deg);
+                &:hover{
+                    transform: scale(1.1);
+                     transition: all 200ms ease-in-out;
+                    opacity: .8;
+                    transform: rotate(90deg);
+                }
+              }
+          }
+        }
+      }
